@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="header-banner">
+            <h2>Body mass index (BMI)</h2>
+            <p>A measure of body fat in adults</p>
+        </div>
+
+        <div class="content-area">
+            <div class="input-group">
+                <label for="weight">Weight</label>
+                <div class="input-with-unit">
+                    <input type="number" id="weight" value="85">
+                    <span>kg</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="height">Height</label>
+                <div class="input-with-unit">
+                    <input type="number" id="height" value="180">
+                    <span>cm</span>
+                </div>
+            </div>
+            
+            <!-- REMOVE THIS BUTTON: -->
+            <!-- <button id="calculate-btn">Calculate BMI</button> --> 
+
+            <div class="bmi-display">
+                <span id="bmi-value" class="large-bmi-number">26.2</span>
+                <span id="bmi-status" class="bmi-status-text status-overweight">Overweight BMI</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body> 
+</html>

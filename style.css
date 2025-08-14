@@ -1,0 +1,149 @@
+/* Adding a background color to the body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eaf2f8; /* This will be a fallback if the image doesn't load */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #4a4a4a;
+    /* KEEP the linear-gradient if you want it as an overlay or background if image fails */
+    background-image: linear-gradient(to bottom right, #eaf2f8, #cce7ff); 
+    background-attachment: fixed;
+
+    /* ----- ADD THESE LINES FOR THE BACKGROUND IMAGE ----- */
+    background-image: url('background.webp'); /* REPLACE with the actual path to your image */
+    background-size: cover; /* Covers the entire body, cropping if necessary */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    /* You can also use 'background: url('path/to/your/image.jpg') center center / cover no-repeat fixed, linear-gradient(to bottom right, #eaf2f8, #cce7ff);'
+       if you want the gradient as an overlay/secondary background. */
+}
+
+/* Styling a container div */
+.container {
+    background-color: #ffffff;
+    padding: 0; /* Remove padding here as sections will have their own */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Increased max-width to accommodate horizontal layout */
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    overflow: hidden; /* Ensures rounded corners are respected by children */
+}
+
+/* Header Banner Styling */
+.header-banner {
+    background-color: #3498db; /* Blue background as in the image */
+    color: white;
+    padding: 25px 30px; /* Ample padding */
+    text-align: left;
+}
+
+.header-banner h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.header-banner p {
+    margin: 0;
+    font-size: 1.0em;
+    opacity: 0.8;
+}
+
+/* Content Area Styling for horizontal alignment */
+.content-area {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    padding: 30px; /* Padding for the main content */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: flex-end; /* Align items to the bottom */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Space between input groups */
+}
+
+.input-group label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #555555;
+    font-weight: 500;
+    text-align: left;
+}
+
+.input-with-unit {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    overflow: hidden; /* Ensures input and unit have combined rounded corners */
+}
+
+.input-with-unit input[type="number"] {
+    border: none; /* Remove individual input border */
+    padding: 10px 12px;
+    width: 100px; /* Fixed width for inputs */
+    margin-bottom: 0; /* Remove margin from input */
+    font-size: 1.1em;
+    text-align: right; /* Align text right in input */
+}
+
+.input-with-unit span {
+    background-color: #f5f5f5; /* Light background for unit */
+    padding: 10px 12px;
+    border-left: 1px solid #dcdcdc; /* Separator line */
+    color: #777;
+    font-weight: 500;
+}
+
+.bmi-display {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack BMI number and status */
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Allows it to take up remaining space */
+    margin-left: 30px; /* Space from inputs */
+}
+
+.large-bmi-number {
+    font-size: 4em; /* Large font size for BMI */
+    font-weight: 700;
+    color: #3498db; /* Blue color for BMI number */
+    line-height: 1; /* Remove extra line height */
+    margin-bottom: 5px;
+}
+
+.bmi-status-text {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Specific colors for status messages (as per your original CSS) */
+.status-underweight {
+    color: #c8f10f;
+}
+
+.status-normal {
+    color: #536e5f;
+}
+
+.status-overweight {
+    color: #f39c12; /* Yellow/Orange for overweight */
+}
+
+.status-obese {
+    color: #e74c3c;
+}
+
+/* Hide original result/status divs if they are now redundant */
+#result, #status {
+    display: none;
+}
